@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SOFRModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SOFR">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="SOFR Index" Type="decimal" Precision="18" Scale="7" />
+    <Property Name="30DayAverage" Type="decimal" Precision="18" Scale="7" />
+    <Property Name="90DayAverage" Type="decimal" Precision="18" Scale="7" />
+    <Property Name="180DayAverage" Type="decimal" Precision="18" Scale="7" />
+  </EntityType>
+  <EntityContainer Name="SOFRModelStoreContainer">
+    <EntitySet Name="SOFR" EntityType="Self.SOFR" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
